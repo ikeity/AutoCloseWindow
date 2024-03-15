@@ -41,7 +41,7 @@ def read_config():
         directory = os.path.dirname(sys.executable)
     elif __file__:
         # 在脚本模式下获取脚本文件的路径
-        directory = os.path.abspath(__file__)
+        directory = os.path.dirname(__file__)
     # 读取配置文件
     config_file = os.path.join(directory, 'config.ini')
     config = configparser.ConfigParser()
